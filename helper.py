@@ -116,9 +116,7 @@ def structured_retriever(question: str) -> str:
             """,
             {"query": generate_full_text_query(entity)},
         )
-        print(response)
         result += "\n".join([el['output'] for el in response])
-    print(result)
 
     return result
 
@@ -185,10 +183,8 @@ chain = (
 )
 
 def invoke_chain(question: str, chat_history):
-    print("invoke chain called")
     graph.query(
         "CREATE FULLTEXT INDEX entity IF NOT EXISTS FOR (e:__Entity__) ON EACH [e.id]")
-    print("fulltext index created")
     if chat_history:
         return chain.invoke(
             {
