@@ -290,5 +290,16 @@ def build_workflow():
     return local_agent
 
 def run_agent(query, local_agent, chat_history):
-    output = output = local_agent.invoke({"question": query, "history": chat_history})
+    """
+    Runs the agent to generate a response based on the given query and chat history.
+
+    Args:
+        query (str): The query or question to be passed to the agent.
+        local_agent (Agent): The local agent object used for generating the response.
+        chat_history (list): The chat history containing previous interactions.
+
+    Returns:
+        str: The generated response from the agent.
+    """
+    output = local_agent.invoke({"question": query, "history": chat_history})
     return output['generation']
