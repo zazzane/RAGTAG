@@ -99,7 +99,7 @@ def structured_retriever(question: str) -> str:
     entities = entity_chain.invoke({"question": question})
     for entity in entities.names:
         response = graph.query(
-            # Fulltext index query - call entity name "entityIdIndex"
+            # Fulltext index query - call entity name "entity"
             """
             CALL db.index.fulltext.queryNodes('entity', $query, {limit: 2})
             YIELD node, score
