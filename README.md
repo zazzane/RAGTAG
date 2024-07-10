@@ -25,3 +25,6 @@ Langchain & Langgraph: While currently experimental, Langchain and Langgraph lib
 LLamaindex & GROQ API LLMs (Mistral): Explored using LLamaindex and GROQ API to integrate additional LLMs like Mistral into RAGTAG. This could potentially expand the range of functionalities and capabilities offered by the chatbot.</br>
 
 Google T5 LLM: Explored the use of Google T5 LLM to investigate alternative large language models that might offer different strengths or functionalities compared to GPT-4o.</br>
+
+### Conceptual Solution Architecture
+![image](https://github.com/zazzane/RAGTAG/assets/111720488/bdca5ab5-3842-40bf-ac90-68f4827229b7)
